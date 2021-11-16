@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aumyf.github.io</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container section-like">
+      <h1>Aumy</h1>
+      <p>プログラミングと計算機のオタク．</p>
+
+      <section class="section-like">
+        <h2>コンタクト</h2>
+        <ul>
+          <li>Twitter: <a href="https://twitter.com/aumy_f">aumy_f</a></li>
+          <li>GitHub: <a href="https://github.com/aumyf">aumyf</a></li>
+          <li>Keybase: <a href="https://keybase.io/aumy">aumy</a></li>
+          <li>
+            Mastodon: <a href="https://don.nzws.me/@mmns">mmns@don.nzws.me</a>
+          </li>
+        </ul>
+      </section>
+      <section class="section-like">
+        <h2>興味</h2>
+        <ul>
+          <li>プログラミング言語</li>
+          <li>Webフロントエンド</li>
+          <li>Webバックエンド？</li>
+        </ul>
+      </section>
+      <section class="section-like">
+        <h2>すき</h2>
+        <p>好き嫌いが激しい．</p>
+
+        <section>
+          <h3>プログラミング言語</h3>
+          <p>
+            コンピュータを駆使して何かを作ることも好きだけどプログラミングそのものが好きというタイプ．
+            主に好きな言語の特徴は以下．
+          </p>
+          <ul>
+            <li>静的型付けで型推論がある</li>
+            <li>
+              型クラス相当がある (型を直交的にグルーピングできる機能がある)
+            </li>
+            <li>代数的データ型，パターンマッチがある</li>
+            <li>
+              関数型言語である
+              <ul>
+                <li>第1級関数</li>
+                <li>関数呼び出しに括弧が不要</li>
+                <li>mapなどの高階関数が標準で多く存在する</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>JavaScript</h3>
+          <p>
+            型変換やthisのバインドなど理解に苦しむ仕様も多いものの，
+            WebブラウザでDOM操作ができるという唯一無二の特徴を生かしてまともな方向へと進化してきたといえる言語．
+            動的型付け言語の中でも特にレコードの扱いが上手い言語だと思う．
+            オブジェクト指向っぽくも関数型っぽくも書けるものの専ら関数型を推しており．
+            その手のプロポーザルをそれなりに追っている．
+            ちなみにこのWebサイトは丁寧に心を込めて手書きしたHTML,
+            CSSをで造られているので，
+            JavaScriptを切っても問題なく見ることができます．
+          </p>
+        </section>
+
+        <section>
+          <h3>TypeScript</h3>
+          <p>
+            一番良く書ける言語．JavaScriptの問題点を引きずったままという点がそのまま利点でもあり，
+            JavaScriptに無理やり型をつけるため無茶苦茶な型が入って遊ぶのが楽しいという面白さがある．
+            TypeScriptのような型を健全性を保ったまま導入したら面白そうだと思っているが，
+            どこまでなら健全なのかというのはよくわかっていない．
+          </p>
+        </section>
+
+        <section>
+          <h3>Rust</h3>
+          <p>
+            かなり好きな言語．とても強い式指向，シャドーイング，強い型推論，トレイト，明示的な参照などなど，
+            JS/TSにはない強力な機能が揃っていて書くのが楽しい．
+            ライフタイムが難しいしC/C++経験がないとありがたみが感じにくいところ，
+            関数型言語をやると関数を中心に文法が冗長なところは気になる．
+            メモリ安全性を抜いてもまったく世の中で通用するポテンシャルがあると思う．
+          </p>
+        </section>
+
+        <section>
+          <h3>OCaml</h3>
+          <p>
+            かなり好きな言語．
+            Rustから参照の複雑性を抜いて型推論がちゃんと動いて構文が軽い言語を求めたらこれになりがち．
+            型クラス相当がなくアドホック多相できないところ，レコードの型推論が気持ち悪いところ，
+            型注釈がやりづらいところあたりが不満点．型推論はあらゆるものに使ってしまっても却って読みづらいので，
+            型注釈を適宜挿入したいのだが，型注釈がHaskellと異なっていて定義と分けられない．
+            SATySFiを触ったときにOpamで苦しめられて以来雰囲気が険悪だったがやってみたらだいぶ面白かった．
+            おそらく私の求める言語はOCamlとRustとTypeScriptの間にある．
+          </p>
+        </section>
+
+        <section>
+          <h3>Nix</h3>
+          <p>
+            純粋関数型DSLで宣言的にパッケージが書けるパッケージマネージャ．
+            開発環境を構築することもでき，direnvと組み合わせればディレクトリに入って
+            <code>direnv allow</code>
+            を叩くだけで完璧な開発環境がセットアップされてしまう．
+            Dockerに押され気味かもしれないがNixでDockerコンテナも書けるらしい．
+          </p>
+        </section>
+
+        <section>
+          <h3>React</h3>
+          <p>
+            Webフロントエンド(広義)フレームワークでは一番好き．やはりTSとJSXで型安全に要素が書けるのが大きい．
+            React Hooksで複雑性が隠蔽できる点もよいが，
+            Hooksの規約がJavaScriptのsyntax,
+            semanticsの上にさらに乗っかってくる点は良くないと思う．
+            Hooksのような仕組みを言語組み込みで提供することはできないだろうか？
+          </p>
+        </section>
+
+        <section>
+          <h3>漫画，アニメなど</h3>
+          <p>
+            それなりに摂る．鬼滅の刃，呪術廻戦のような
+            <em>いまや</em>
+            一大メジャー作となってしまったような作品も (<strong
+              >人気が出る前の本誌連載段階から</strong
+            >
+            )
+            見ているし，少女終末旅行とかぬるめたのような萌えオタクっぽいものも観る．
+          </p>
+        </section>
+        <section>
+          <h3>音楽</h3>
+          <p>
+            それなりに聴く．マスロックとエレクトロニカの周辺をよく聴く気がします．
+            Pendulum，ヒトリエ，NUITO，Animals as
+            Leaders，bohemianvoodoo，toe，Spangle call Lilli
+            line，LITE，Mili，パスピエ，フレデリック，サカナクションとか．
+          </p>
+          <p>
+            「ぼくらの16bit戦争」に沼に落とされて以来変拍子好きが治りません．「HIMITSU
+            GIRL'S TOP SECRET」とか「5カウントハロー」とかが好き．
+          </p>
+        </section>
+      </section>
+    </main>
+    <footer class="container">
+      <small>&copy; 2021 Aumy</small>
+    </footer>
+  </body>
+</html>
