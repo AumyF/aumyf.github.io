@@ -6,12 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aumy</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/alpinejs"></script>
+    <script type="text/javascript">
+      const quotes = [
+        {
+          body: "風をずっと待っているの　身軽になるための言葉自体が重くて歩けないわ",
+          title: "カゼマチグサ",
+          author: "稲葉曇",
+        },
+        {
+          body: "全部疑えそうだよ　能書きと空洞ばっかだ　年中 可燃性の言葉に火をくべ",
+          title: "アンダスタンディング",
+          author: "パスピエ",
+        },
+        {
+          body: "逃げだそよ今すぐに　良いじゃない!　泣き出す独りの夜、良いじゃない。",
+          title: "グレーゾーンにて。",
+          author: "wowaka",
+        },
+        {
+          body: "足りない 足りない 足りない 足りない頭で　考えた 嫌われないように",
+          title: "足りない",
+          author: "nimono",
+        },
+        {
+          body: "とがれるだけとがっていけ　忘れるまで 喋り続けて　青くてもいい 私になれ　笑えるまで 踊り続けて",
+          title: "Pandalism",
+          author: "littlebylittle",
+        },
+        {
+          body: "一方的に愛を語らせてよ　しららかな三日月　さあ僕の手を取って　軽やかにステップを　あと少しだけ",
+          title: "三日月ステップ",
+          author: "r-906",
+        },
+      ];
+      function init() {
+        return Math.floor((Math.random() * 10) % quotes.length);
+      }
+    </script>
   </head>
   <body>
     <main class="container stack gap-6">
       <section class="stack gap-4">
         <h1>Aumy / おーみー</h1>
-        <p>プログラミングと計算機のオタク．</p>
+        <div x-data="{ showing: init() }">
+          <button @click="showing = init()">Rotate</button>
+          <figure>
+            <blockquote x-text="quotes[showing].body"></blockquote>
+            <figcaption>
+              <span x-text="quotes[showing].author"></span
+              ><cite x-text="quotes[showing].title"></cite>
+            </figcaption>
+          </figure>
+        </div>
       </section>
 
       <section class="stack gap-4">
@@ -126,7 +173,10 @@
         <section class="stack gap-2">
           <h3>F#</h3>
           <p>
-            OCamlを.NETに移植してオフサイドルールを載せた言語。オフサイドルールによって <code>in</code> と <code>;</code> がともに消えてScalaやKotlinのセミコロン省略に似た構文へと進化している点が非常に好き。
+            OCamlを.NETに移植してオフサイドルールを載せた言語。オフサイドルールによって
+            <code>in</code> と
+            <code>;</code>
+            がともに消えてScalaやKotlinのセミコロン省略に似た構文へと進化している点が非常に好き。
             C#向けのライブラリもシュッと使えて便利だが、.NET由来のオブジェクト指向な言語機能が混ざっている点に関数型信者の血が騒いでしまう。
             次世代のシェルはF#をベースにした構文をもちWebAssemblyにコンパイルされるという啓示を受けたが、Wasmをやるモチベーションがいまいち湧かない。
           </p>

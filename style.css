@@ -23,6 +23,40 @@ main {
   padding-inline: 16px;
 }
 
+figure {
+  margin: 0;
+  padding-inline-start: 1rem;
+  padding-block: 0.5rem;
+  border-inline-start: 1px solid var(--border);
+}
+
+blockquote {
+  margin: 0;
+}
+
+figure > figcaption::before {
+  content: '—';
+}
+
+cite {
+  font-style: normal;
+}
+
+cite::before {
+  content: '『';
+}
+
+cite::after {
+  content: '』';
+}
+
+button {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3 {
