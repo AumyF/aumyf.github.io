@@ -63,17 +63,13 @@
 
       <section class="stack gap-4">
         <h2>プロフィール</h2>
-        <ul>
-          <li>
-            <span>名前</span>
-            <ul>
-              <li>Aumy</li>
-              <li>おーみー</li>
-              <li>Fukuda, Y.</li>
-            </ul>
-          </li>
-          <li>生年: 2003</li>
-        </ul>
+        <p>
+          2003年生まれ。高卒後浪人をやりながら某社でインターンをやっている。
+        </p>
+        <p>
+          根本的に開発者が好きで、開発者の体験を高めるための技術、たとえばプログラミング言語処理系、Webフロントエンドツールチェインに興味がある。好きなプログラミング言語はTypeScript、Rust、OCaml、F#。ラインナップからわかるように静的型付け言語でしかプログラムを書けない。インターン先の影響でNeovimを始めたが、インサートモードのまま矢印キーで縦横無尽に移動しがち。
+        </p>
+        <p>野菜が食えない。</p>
       </section>
 
       <section class="stack gap-4">
@@ -88,161 +84,9 @@
           <li>Scrapbox: <a href="https://scrapbox.io/aumy">aumy</a></li>
         </ul>
       </section>
-      <section class="stack gap-4">
-        <h2>興味</h2>
-        <ul>
-          <li>プログラミング言語</li>
-          <li>Webフロントエンド</li>
-          <li>Webバックエンド？</li>
-        </ul>
-      </section>
-      <section class="stack gap-4">
-        <h2>すき</h2>
-        <p>好き嫌いが激しい．</p>
-
-        <section class="stack gap-2">
-          <h3>プログラミング言語</h3>
-          <p>
-            コンピュータを駆使して何かを作ることも好きだけどプログラミングそのものが好きというタイプ．
-            主に好きな言語の特徴は以下．
-          </p>
-          <ul>
-            <li>静的型付けで型推論がある</li>
-            <li>
-              型クラス相当がある (型を直交的にグルーピングできる機能がある)
-            </li>
-            <li>代数的データ型，パターンマッチがある</li>
-            <li>
-              関数型言語である
-              <ul>
-                <li>第1級関数</li>
-                <li>関数呼び出しに括弧が不要</li>
-                <li>mapなどの高階関数が標準で多く存在する</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>JavaScript</h3>
-          <p>
-            型変換やthisのバインドなど面倒な仕様も多いものの，
-            WebブラウザでDOM操作ができるという唯一無二の特徴を生かしてまともな方向へと進化してきたといえる言語．
-            特にオブジェクトをレコードっぽく扱うところは他にない特徴だと思う．
-            オブジェクト指向っぽくも関数型っぽくも書けるものの専ら関数型を推しており．
-            その手のプロポーザルをそれなりに追っている．
-            ちなみにこのWebサイトは丁寧に心を込めて手書きしたHTML,
-            CSSで造られている計算機資源にやさしいJavaScript非使用Webサイトです．
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>TypeScript</h3>
-          <p>
-            一番良く書ける言語．JavaScriptの問題点を引きずったままという点がそのまま利点でもあり，
-            JavaScriptに無理やり型をつけるため無茶苦茶な型が入って遊ぶのが楽しいという面白さがある．
-            TypeScriptのような型を健全性を保ったまま導入したら面白そうだと思っているが，
-            どこまでなら健全なのかというのはよくわかっていない．
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>Rust</h3>
-          <p>
-            かなり好きな言語．とても強い式指向，シャドーイング，強い型推論，トレイト，明示的な参照などなど，
-            JS/TSにはない強力な機能が揃っていて書くのが楽しい．
-            ライフタイムが難しいしC/C++経験がないとありがたみが感じにくいところ，
-            関数型言語をやると関数を中心に文法が冗長なところは気になる．
-            メモリ安全性を抜いてもまったく世の中で通用するポテンシャルがあると思う．
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>OCaml</h3>
-          <p>
-            かなり好きな言語．
-            Rustから参照の複雑性を抜いて型推論がちゃんと動いて構文が軽い言語を求めたらこれになりがち．
-            型クラス相当がなくアドホック多相できないところ，レコードの型推論が気持ち悪いところ，
-            型注釈がやりづらいところあたりが不満点．型推論はあらゆるものに使ってしまっても却って読みづらいので，
-            型注釈を適宜挿入したいのだが，型注釈がHaskellと異なっていて定義と分けられない．
-            SATySFiを触ったときにOpamで苦しめられて以来雰囲気が険悪だったがやってみたらだいぶ面白かった．
-            おそらく私の求める言語はOCamlとRustとTypeScriptの間にある．
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>F#</h3>
-          <p>
-            OCamlを.NETに移植してオフサイドルールを載せた言語。オフサイドルールによって
-            <code>in</code> と
-            <code>;</code>
-            がともに消えてScalaやKotlinのセミコロン省略に似た構文へと進化している点が非常に好き。
-            C#向けのライブラリもシュッと使えて便利だが、.NET由来のオブジェクト指向な言語機能が混ざっている点に関数型信者の血が騒いでしまう。
-            次世代のシェルはF#をベースにした構文をもちWebAssemblyにコンパイルされるという啓示を受けたが、Wasmをやるモチベーションがいまいち湧かない。
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>Nix</h3>
-          <p>
-            純粋関数型DSLで宣言的にパッケージが書けるパッケージマネージャ．
-            開発環境を構築することもでき，direnvと組み合わせればディレクトリに入って
-            <code>direnv allow</code>
-            を叩くだけで完璧な開発環境がセットアップされてしまう．
-            Dockerに押され気味かもしれないがNixでDockerコンテナも書けるらしい．
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>React</h3>
-          <p>
-            Webフロントエンド(広義)フレームワークでは一番好き．やはりTSとJSXで型安全に要素が書けるのが大きい．
-            React Hooksで複雑性が隠蔽できる点もよいが，
-            Hooksの規約がJavaScriptのsyntax,
-            semanticsの上にさらに乗っかってくる点は良くないと思う．
-            Hooksのような仕組みを言語組み込みで提供することはできないだろうか？
-          </p>
-        </section>
-
-        <section class="stack gap-2">
-          <h3>漫画，アニメなど</h3>
-          <p>
-            それなりに摂る．鬼滅の刃，呪術廻戦のような
-            <em>いまや</em>
-            一大メジャー作となってしまったような作品も (<strong
-              >人気が出る前の本誌連載段階から</strong
-            >
-            )
-            見ているし，少女終末旅行とかぬるめたのような萌えオタクっぽいものも観る．
-          </p>
-        </section>
-        <section class="stack gap-2">
-          <h3>音楽</h3>
-          <p>
-            それなりに聴く．マスロックとエレクトロニカの周辺をよく聴く気がします．
-            Pendulum，ヒトリエ，NUITO，Animals as
-            Leaders，bohemianvoodoo，toe，Spangle call Lilli
-            line，LITE，Mili，パスピエ，フレデリック，サカナクションとか．
-          </p>
-          <p>
-            「ぼくらの16bit戦争」に沼に落とされて以来変拍子好きが治りません．「HIMITSU
-            GIRL'S TOP SECRET」とか「5カウントハロー」とかが好き．
-          </p>
-        </section>
-      </section>
-      <section class="stack gap-4">
-        <h2>苦手なもの</h2>
-        <ul>
-          <li>社会</li>
-          <li>野菜類</li>
-          <li>資本主義</li>
-          <li>動的型付け</li>
-          <li>炊きたての米</li>
-        </ul>
-      </section>
     </main>
     <footer>
-      <small>&copy; 2022 Aumy</small>
+      <small>&copy; 2022 Aumy / Licensed under CC-BY 4.0</small>
     </footer>
   </body>
 </html>
