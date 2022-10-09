@@ -39,6 +39,66 @@
           title: "三日月ステップ",
           author: "r-906",
         },
+        {
+          body: "温い籠の中で 虚を浴びて 自分の尻尾に噛み付いて 何もしないをしている",
+          title: "たぶん終わり",
+          author: "いよわ",
+        },
+        {
+          body: "ほらどっかに落とした知識の実を　GPSで探し出して",
+          title: "たぶん終わり",
+          author: "いよわ",
+        },
+        {
+          body: "今日だって独り東京の景色に透ける僕は幽霊みたいだ",
+          title: "幽霊東京",
+          author: "Ayase",
+        },
+        {
+          body: "つらいらいらい やばい！　オートで落ちる青年　やめたいぜ！",
+          title: "つらい！やばい！つらい！",
+          author: "薄塩指数",
+        },
+        {
+          body: "設計ミスの代償を被ってこのスケジュールだ　人に 街に 割食わされて きりきりきりきり舞っている",
+          title: "Stridor",
+          author: "Sohbana",
+        },
+        {
+          body: "誰でも生命惜しかろう 人の愛よりも自己愛性 言いたい事はだいたいそんなんだ",
+          title: "ヒガン",
+          author: "john",
+        },
+        {
+          body: "あんなええもん持ったらこうなるわ　そりゃあんたのせいやんか",
+          title: "死神",
+          author: "米津玄師",
+        },
+        {
+          body: "「だいきらいさ、だいきらいさ」大人びた声 こじらせたあたしの劣等、劣等、劣等症！",
+          title: "アンチテーゼ・ジャンクガール",
+          author: "ヒトリエ",
+        },
+        {
+          body: "打ち切りの先でまた会えるよ　パラレルワールド旅して　散りばめる願いに気付いて",
+          title: "POP TEAM EPIC",
+          author: "上坂すみれ",
+        },
+        {
+          body: "何度だって 何度だって　イヤフォンの中に潜む悪魔が　袖をひっぱって　「まだ遊び足りない」って",
+          title: "リリリピート",
+          author: "フレデリック",
+        },
+        {
+          body: "There is no one can understand me truly　I do not go out and I will keep silence　Everyone is mania in general",
+          title: "グッドバイ",
+          author: "toe",
+        },
+        {
+          body: "勝利者などいない 戦いに疲れ果て　星空を見上げる　泣く事もかなわない",
+          title: "THE WINNER",
+          author: "松原みき",
+        },
       ];
       function init() {
         return Math.floor((Math.random() * 10) % quotes.length);
@@ -50,7 +110,7 @@
       <section class="stack gap-4">
         <h1>Aumy / おーみー</h1>
         <div x-data="{ showing: init() }">
-          <button @click="showing = init()">Rotate</button>
+          <button @click="showing = init()">Roll</button>
           <figure>
             <blockquote x-text="quotes[showing].body"></blockquote>
             <figcaption>
