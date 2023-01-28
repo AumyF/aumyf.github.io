@@ -4,20 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aumy</title>
+    <meta name="description" content="おーみーのプロフィール" />
+    <title>fuku.day</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://unpkg.com/alpinejs"></script>
+    <script defer src="https://unpkg.com/alpinejs"></script>
     <script type="text/javascript">
       const quotes = [
         {
-          body: "風をずっと待っているの　身軽になるための言葉自体が重くて歩けないわ",
-          title: "カゼマチグサ",
+          body: "許してね　きみの夢も希望も描けなくなって　卓上カレンダーはマルバツゲームの犠牲者",
+          title: "ノンユース",
           author: "稲葉曇",
         },
         {
-          body: "全部疑えそうだよ　能書きと空洞ばっかだ　年中 可燃性の言葉に火をくべ",
+          body: "全部「難しいね。」ひと言で済ませんなよ　フェイク 見せかけの思考にも飽きて",
           title: "アンダスタンディング",
           author: "パスピエ",
+        },
+        {
+          body: "君もそう、「非現実を愛してます。」なんて指では言うけど　口では何も言えないのにね",
+          title: "人造エネミー",
+          author: "じん",
         },
         {
           body: "逃げだそよ今すぐに　良いじゃない!　泣き出す独りの夜、良いじゃない。",
@@ -35,7 +41,7 @@
           author: "littlebylittle",
         },
         {
-          body: "一方的に愛を語らせてよ　しららかな三日月　さあ僕の手を取って　軽やかにステップを　あと少しだけ",
+          body: "ねえどうして？なんで？なんで？なんで？キミは突っ立ってんの？",
           title: "三日月ステップ",
           author: "r-906",
         },
@@ -75,9 +81,19 @@
           author: "米津玄師",
         },
         {
-          body: "「だいきらいさ、だいきらいさ」大人びた声 こじらせたあたしの劣等、劣等、劣等症！",
-          title: "アンチテーゼ・ジャンクガール",
+          body: "今日、明日いつ何時でも転がり続けんだって　なあ、そうだろう？",
+          title: "ハイゲイン",
           author: "ヒトリエ",
+        },
+        {
+          body: "雨に濡れるのが好きだった　曇った顔が似合うから　嵐に怯えてるフリをして　空が割れるのを待っていたんだ",
+          title: "青春コンプレックス",
+          author: "結束バンド",
+        },
+        {
+          body: "昨日の夜から頭痛が痛いんだ！",
+          title: "トオトロジイダウトフル",
+          author: "ツミキ",
         },
         {
           body: "打ち切りの先でまた会えるよ　パラレルワールド旅して　散りばめる願いに気付いて",
@@ -85,12 +101,7 @@
           author: "上坂すみれ",
         },
         {
-          body: "何度だって 何度だって　イヤフォンの中に潜む悪魔が　袖をひっぱって　「まだ遊び足りない」って",
-          title: "リリリピート",
-          author: "フレデリック",
-        },
-        {
-          body: "There is no one can understand me truly　I do not go out and I will keep silence　Everyone is mania in general",
+          body: "Everyone is mania in general",
           title: "グッドバイ",
           author: "toe",
         },
@@ -104,12 +115,43 @@
           title: "OiSa",
           author: "ばってん少女隊",
         },
+        {
+          body: "Since I'm the mad scientist, proclaimed by myself",
+          title: "RTRT",
+          author: "Mili",
+        },
+        {
+          body: `<span lang="zh-CN">她说她是透明的　她说她快熄灭了</span>`,
+          title: "Electronic Girl",
+          author: "Chinese Football",
+        },
+        {
+          body: `「なんてことだ！死んでしまう！」`,
+          title: "マーシャル・マキシマイザー",
+          author: "柊マグネタイト",
+        },
+        {
+          body: "ウグイスが鳴いて　ゴミになった制服が　夜空になって舞ってった　過去を喰らい尽くした",
+          title: "過去を喰らう",
+          author: "花譜",
+        },
+        {
+          body: `何も全然問題無いじゃん　ミルクや砂糖で美味く誤魔化していこうぜ移ろう迄`,
+          title: "SUGAR",
+          author: "NOMELON NOLEMON",
+        },
+        {
+          body: "どうだっていいよ、もう寝てたいよ。毛布のなかの孤独の発明。",
+          title: "Leave the Planet",
+          author: "For Tracy Hyde",
+        },
       ];
       function init() {
-        return Math.floor((Math.random() * 100) % quotes.length);
+        return Math.floor(Math.random() * quotes.length);
       }
     </script>
   </head>
+
   <body>
     <main class="container stack gap-6">
       <section class="stack gap-4">
@@ -117,29 +159,49 @@
         <div x-data="{ showing: init() }">
           <button @click="showing = init()">Roll</button>
           <figure>
-            <blockquote x-text="quotes[showing].body"></blockquote>
+            <blockquote x-html="quotes[showing].body"></blockquote>
             <figcaption>
-              <span x-text="quotes[showing].author"></span
-              ><cite x-text="quotes[showing].title"></cite>
+              <span x-text="quotes[showing].author"></span>
+              <cite x-text="quotes[showing].title"></cite>
             </figcaption>
           </figure>
         </div>
       </section>
 
       <section class="stack gap-4">
-        <h2>プロフィール</h2>
-        <p>
-          2003年生まれ。高卒後浪人をやりながら某社でインターンをやっている。
-        </p>
-        <p>
-          根本的に開発者が好きで、開発者の体験を高めるための技術、たとえばプログラミング言語処理系、Webフロントエンドツールチェインに興味がある。好きなプログラミング言語はTypeScript、Rust、OCaml、F#。ラインナップからわかるように静的型付け言語でしかプログラムを書けない。インターン先の影響でNeovimを始めたが、インサートモードのまま矢印キーで縦横無尽に移動しがち。
-        </p>
-        <p>野菜が食えない。</p>
+        <p>野菜が食えない。熱い米が嫌い。</p>
       </section>
 
       <section class="stack gap-4">
-        <h2>コンタクト</h2>
+        <h2>興味のあるもの</h2>
         <ul>
+          <li>開発体験の向上</li>
+          <li>Web</li>
+          <li>低レイヤープログラミング</li>
+          <li>型システム</li>
+          <li>宣言的なもの</li>
+          <li>composableなもの</li>
+          <li>適度な変拍子</li>
+          <li>カッティング</li>
+          <li>かわいい</li>
+          <li>目に光がない</li>
+          <li>尖りがある</li>
+        </ul>
+      </section>
+      <section class="stack gap-4">
+        <h2>経歴</h2>
+        <ul>
+          <li>2003: (運悪く) 出生</li>
+          <li>2010-2019: 公立小中</li>
+          <li>2019-2022: 公立工業高校</li>
+          <li>2022/04-: 某社 エンジニアインターン</li>
+        </ul>
+      </section>
+
+      <section class="stack gap-4">
+        <h2>おーみー on the Internet...</h2>
+        <ul>
+          <li>Blog: <a href="https://blog.fuku.day">blog.fuku.day</a></li>
           <li>Twitter: <a href="https://twitter.com/aumy_f">aumy_f</a></li>
           <li>GitHub: <a href="https://github.com/aumyf">aumyf</a></li>
           <li>Keybase: <a href="https://keybase.io/aumy">aumy</a></li>
@@ -147,6 +209,19 @@
             Mastodon: <a href="https://don.nzws.me/@mmns">mmns@don.nzws.me</a>
           </li>
           <li>Scrapbox: <a href="https://scrapbox.io/aumy">aumy</a></li>
+        </ul>
+      </section>
+
+      <section class="stack gap-4">
+        <h2>リンク集</h2>
+        <p>
+          勝手に貼っています、要望がある場合は適当な手段で連絡してください。当サイトはリンクフリーですがバナーがまだない
+        </p>
+        <ul>
+          <li><a href="https://s7tya.com">s7tya.com</a></li>
+          <li><a href="https://sno2wman.net">sno2wman.net</a></li>
+          <li><a href="https://www.haxibami.net">www.haxibami.net</a></li>
+          <li><a href="https://yude.jp">yude.jp</a></li>
         </ul>
       </section>
     </main>

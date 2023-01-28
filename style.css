@@ -9,6 +9,7 @@ html {
   color: var(--text);
   font-family: sans-serif;
 }
+
 body {
   margin: 0;
   padding-block: 16px;
@@ -23,6 +24,7 @@ main {
   padding-inline: 16px;
 }
 
+
 figure {
   margin: 0;
   padding-inline-start: 1rem;
@@ -34,8 +36,8 @@ blockquote {
   margin: 0;
 }
 
-figure > figcaption::before {
-  content: '—';
+figure>figcaption::before {
+  content: "—";
 }
 
 cite {
@@ -43,11 +45,11 @@ cite {
 }
 
 cite::before {
-  content: '『';
+  content: "『";
 }
 
 cite::after {
-  content: '』';
+  content: "』";
 }
 
 button {
@@ -62,17 +64,21 @@ h2,
 h3 {
   margin: unset;
 }
+
 h2 {
   border-block-end: 1px solid var(--border);
 }
+
 h1 {
   font-size: 2rem;
 }
+
 p {
   line-height: 1.75;
   margin: unset;
   text-align: justify;
 }
+
 ul,
 ol {
   line-height: 1.75;
@@ -80,10 +86,12 @@ ol {
   padding: unset;
   padding-inline-start: 2rem;
 }
+
 a {
   color: var(--link);
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
